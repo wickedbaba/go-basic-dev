@@ -41,5 +41,7 @@ func main() {
 	//  to lower case and upper case
 	pl("Lower Case:", strings.ToLower("ABCDEFG"))
 	pl("Lower Case:", strings.ToUpper("abcdefg"))
+	pl("Has prefix : ", strings.HasPrefix("yestheory", "yes"))
+	pl("Has suffix: ", strings.HasSuffix("yesthoery", "ry"))
 
 }
