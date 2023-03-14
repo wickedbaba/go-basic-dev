@@ -3,6 +3,7 @@ package main
 import (
 	stuff "example/project/mypackages"
 	"fmt"
+	"log"
 	"reflect"
 )
 
@@ -18,4 +19,30 @@ func main() {
 
 	pl("the result: ", strArr)
 	pl("the type of result: ", reflect.TypeOf(strArr))
+
+	// ----------------------------------------------------------------------------------------------------------------------------
+	//  implementation of protected variables
+
+	dateVar := stuff.Date{}
+
+	err := dateVar.SetDay(01)
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	err = dateVar.SetMonth(10)
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	err = dateVar.SetYear(2007)
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Printf("Todays date is : %d-%d-%d", dateVar.GetDay(), dateVar.GetMonth(), dateVar.GetYear())
+
 }
