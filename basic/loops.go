@@ -12,7 +12,7 @@ func main() {
 	for x := 5; x > 0; x-- {
 		pl(x)
 	}
-
+	/
 	//  for loop being used as a while loop
 	index := 5
 
